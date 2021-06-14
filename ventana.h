@@ -1,6 +1,10 @@
 #pragma once
 
+
+
 namespace Examen3AndresEsteban {
+
+
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -8,6 +12,8 @@ namespace Examen3AndresEsteban {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+
+
 
 	/// <summary>
 	/// Resumen de ventana
@@ -23,6 +29,8 @@ namespace Examen3AndresEsteban {
 			//
 		}
 
+
+
 	protected:
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
@@ -34,28 +42,58 @@ namespace Examen3AndresEsteban {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::GroupBox^ gb_ordenes;
+	private: System::Windows::Forms::GroupBox^ gb_inicio;
+	protected:
+
+
+
+
 
 	protected:
 
-	private: System::Windows::Forms::TextBox^ txt_preorden;
 
-	private: System::Windows::Forms::TextBox^ txt_infijo;
 
-	private: System::Windows::Forms::TextBox^ txt_posfijo;
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::TextBox^ txt_operacion;
 	private: System::Windows::Forms::Button^ b_convertir;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
+
+
+
+
+
+	private: System::Windows::Forms::RadioButton^ rb_preorden;
+	private: System::Windows::Forms::RadioButton^ rb_infijo;
+	private: System::Windows::Forms::RadioButton^ rb_postfijo;
+	private: System::Windows::Forms::GroupBox^ gb_resultado;
+	private: System::Windows::Forms::Button^ b_volver;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::TextBox^ txt_Preorden;
+
+
+
+	private: System::Windows::Forms::TextBox^ txt_Infijo;
+
+
+
+	private: System::Windows::Forms::TextBox^ txt_Postfijo;
+
+
+
 
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
+
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -64,155 +102,262 @@ namespace Examen3AndresEsteban {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->gb_ordenes = (gcnew System::Windows::Forms::GroupBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->txt_preorden = (gcnew System::Windows::Forms::TextBox());
-			this->txt_infijo = (gcnew System::Windows::Forms::TextBox());
-			this->txt_posfijo = (gcnew System::Windows::Forms::TextBox());
+			this->gb_inicio = (gcnew System::Windows::Forms::GroupBox());
+			this->gb_resultado = (gcnew System::Windows::Forms::GroupBox());
+			this->b_volver = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->txt_Preorden = (gcnew System::Windows::Forms::TextBox());
+			this->txt_Infijo = (gcnew System::Windows::Forms::TextBox());
+			this->txt_Postfijo = (gcnew System::Windows::Forms::TextBox());
+			this->rb_preorden = (gcnew System::Windows::Forms::RadioButton());
+			this->rb_infijo = (gcnew System::Windows::Forms::RadioButton());
+			this->rb_postfijo = (gcnew System::Windows::Forms::RadioButton());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->txt_operacion = (gcnew System::Windows::Forms::TextBox());
 			this->b_convertir = (gcnew System::Windows::Forms::Button());
-			this->groupBox1->SuspendLayout();
-			this->gb_ordenes->SuspendLayout();
+			this->txt_operacion = (gcnew System::Windows::Forms::TextBox());
+			this->gb_inicio->SuspendLayout();
+			this->gb_resultado->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->gb_ordenes);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Controls->Add(this->txt_operacion);
-			this->groupBox1->Location = System::Drawing::Point(33, 12);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(809, 430);
-			this->groupBox1->TabIndex = 0;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"groupBox1";
-			// 
-			// gb_ordenes
-			// 
-			this->gb_ordenes->Controls->Add(this->label4);
-			this->gb_ordenes->Controls->Add(this->label3);
-			this->gb_ordenes->Controls->Add(this->label2);
-			this->gb_ordenes->Controls->Add(this->txt_preorden);
-			this->gb_ordenes->Controls->Add(this->txt_infijo);
-			this->gb_ordenes->Controls->Add(this->txt_posfijo);
-			this->gb_ordenes->Location = System::Drawing::Point(-9, 16);
-			this->gb_ordenes->Name = L"gb_ordenes";
-			this->gb_ordenes->Size = System::Drawing::Size(818, 414);
-			this->gb_ordenes->TabIndex = 2;
-			this->gb_ordenes->TabStop = false;
-			this->gb_ordenes->Text = L"groupBox2";
-			this->gb_ordenes->Visible = false;
-			// 
-			// label4
-			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(193, 286);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(146, 32);
-			this->label4->TabIndex = 5;
-			this->label4->Text = L"PreOrden:";
-			// 
-			// label3
-			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(193, 174);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(84, 32);
-			this->label3->TabIndex = 4;
-			this->label3->Text = L"Infijo:";
-			this->label3->Click += gcnew System::EventHandler(this, &ventana::label3);
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(199, 56);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(125, 32);
-			this->label2->TabIndex = 3;
-			this->label2->Text = L"Postfijo: ";
-			this->label2->Click += gcnew System::EventHandler(this, &ventana::label2);
-			// 
-			// txt_preorden
-			// 
-			this->txt_preorden->Location = System::Drawing::Point(277, 321);
-			this->txt_preorden->Name = L"txt_preorden";
-			this->txt_preorden->Size = System::Drawing::Size(302, 38);
-			this->txt_preorden->TabIndex = 2;
-			// 
-			// txt_infijo
-			// 
-			this->txt_infijo->Location = System::Drawing::Point(277, 215);
-			this->txt_infijo->Name = L"txt_infijo";
-			this->txt_infijo->Size = System::Drawing::Size(302, 38);
-			this->txt_infijo->TabIndex = 1;
-			this->txt_infijo->TextChanged += gcnew System::EventHandler(this, &ventana::txt_infijo);
-			// 
-			// txt_posfijo
-			// 
-			this->txt_posfijo->Location = System::Drawing::Point(277, 127);
-			this->txt_posfijo->Name = L"txt_posfijo";
-			this->txt_posfijo->Size = System::Drawing::Size(302, 38);
-			this->txt_posfijo->TabIndex = 0;
-			this->txt_posfijo->TextChanged += gcnew System::EventHandler(this, &ventana::txt_posfijo_TextChanged);
-			// 
+			//
+			// gb_inicio
+			//
+			this->gb_inicio->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->gb_inicio->Controls->Add(this->gb_resultado);
+			this->gb_inicio->Controls->Add(this->rb_preorden);
+			this->gb_inicio->Controls->Add(this->rb_infijo);
+			this->gb_inicio->Controls->Add(this->rb_postfijo);
+			this->gb_inicio->Controls->Add(this->label1);
+			this->gb_inicio->Controls->Add(this->b_convertir);
+			this->gb_inicio->Controls->Add(this->txt_operacion);
+			this->gb_inicio->Location = System::Drawing::Point(10, 1);
+			this->gb_inicio->Margin = System::Windows::Forms::Padding(1);
+			this->gb_inicio->Name = L"gb_inicio";
+			this->gb_inicio->Padding = System::Windows::Forms::Padding(1);
+			this->gb_inicio->Size = System::Drawing::Size(444, 355);
+			this->gb_inicio->TabIndex = 0;
+			this->gb_inicio->TabStop = false;
+			this->gb_inicio->Text = L"Inicio";
+			//
+			// gb_resultado
+			//
+			this->gb_resultado->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->gb_resultado->Controls->Add(this->b_volver);
+			this->gb_resultado->Controls->Add(this->label5);
+			this->gb_resultado->Controls->Add(this->label6);
+			this->gb_resultado->Controls->Add(this->label7);
+			this->gb_resultado->Controls->Add(this->txt_Preorden);
+			this->gb_resultado->Controls->Add(this->txt_Infijo);
+			this->gb_resultado->Controls->Add(this->txt_Postfijo);
+			this->gb_resultado->Location = System::Drawing::Point(2, 0);
+			this->gb_resultado->Margin = System::Windows::Forms::Padding(1);
+			this->gb_resultado->Name = L"gb_resultado";
+			this->gb_resultado->Padding = System::Windows::Forms::Padding(1);
+			this->gb_resultado->Size = System::Drawing::Size(440, 353);
+			this->gb_resultado->TabIndex = 3;
+			this->gb_resultado->TabStop = false;
+			this->gb_resultado->Text = L"Resultado";
+			this->gb_resultado->Visible = false;
+			//
+			// b_volver
+			//
+			this->b_volver->Location = System::Drawing::Point(111, 282);
+			this->b_volver->Name = L"b_volver";
+			this->b_volver->Size = System::Drawing::Size(193, 23);
+			this->b_volver->TabIndex = 6;
+			this->b_volver->Text = L"Volver al inicio";
+			this->b_volver->UseVisualStyleBackColor = true;
+			this->b_volver->Click += gcnew System::EventHandler(this, &ventana::b_volver_Click);
+			//
+			// label5
+			//
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(20, 199);
+			this->label5->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(55, 13);
+			this->label5->TabIndex = 5;
+			this->label5->Text = L"PreOrden:";
+			//
+			// label6
+			//
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(20, 121);
+			this->label6->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(32, 13);
+			this->label6->TabIndex = 4;
+			this->label6->Text = L"Infijo:";
+			//
+			// label7
+			//
+			this->label7->AutoSize = true;
+			this->label7->Location = System::Drawing::Point(20, 49);
+			this->label7->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(47, 13);
+			this->label7->TabIndex = 3;
+			this->label7->Text = L"Postfijo: ";
+			//
+			// txt_Preorden
+			//
+			this->txt_Preorden->Location = System::Drawing::Point(89, 196);
+			this->txt_Preorden->Margin = System::Windows::Forms::Padding(1);
+			this->txt_Preorden->Name = L"txt_Preorden";
+			this->txt_Preorden->Size = System::Drawing::Size(265, 20);
+			this->txt_Preorden->TabIndex = 2;
+			//
+			// txt_Infijo
+			//
+			this->txt_Infijo->Location = System::Drawing::Point(89, 121);
+			this->txt_Infijo->Margin = System::Windows::Forms::Padding(1);
+			this->txt_Infijo->Name = L"txt_Infijo";
+			this->txt_Infijo->Size = System::Drawing::Size(265, 20);
+			this->txt_Infijo->TabIndex = 1;
+			//
+			// txt_Postfijo
+			//
+			this->txt_Postfijo->Location = System::Drawing::Point(89, 49);
+			this->txt_Postfijo->Margin = System::Windows::Forms::Padding(1);
+			this->txt_Postfijo->Name = L"txt_Postfijo";
+			this->txt_Postfijo->Size = System::Drawing::Size(265, 20);
+			this->txt_Postfijo->TabIndex = 0;
+			//
+			// rb_preorden
+			//
+			this->rb_preorden->AutoSize = true;
+			this->rb_preorden->Location = System::Drawing::Point(288, 121);
+			this->rb_preorden->Name = L"rb_preorden";
+			this->rb_preorden->Size = System::Drawing::Size(68, 17);
+			this->rb_preorden->TabIndex = 5;
+			this->rb_preorden->TabStop = true;
+			this->rb_preorden->Text = L"Preorden";
+			this->rb_preorden->UseVisualStyleBackColor = true;
+			//
+			// rb_infijo
+			//
+			this->rb_infijo->AutoSize = true;
+			this->rb_infijo->Location = System::Drawing::Point(288, 85);
+			this->rb_infijo->Name = L"rb_infijo";
+			this->rb_infijo->Size = System::Drawing::Size(47, 17);
+			this->rb_infijo->TabIndex = 4;
+			this->rb_infijo->TabStop = true;
+			this->rb_infijo->Text = L"Infijo";
+			this->rb_infijo->UseVisualStyleBackColor = true;
+			//
+			// rb_postfijo
+			//
+			this->rb_postfijo->AutoSize = true;
+			this->rb_postfijo->Location = System::Drawing::Point(288, 49);
+			this->rb_postfijo->Name = L"rb_postfijo";
+			this->rb_postfijo->Size = System::Drawing::Size(59, 17);
+			this->rb_postfijo->TabIndex = 3;
+			this->rb_postfijo->TabStop = true;
+			this->rb_postfijo->Text = L"Postfijo";
+			this->rb_postfijo->UseVisualStyleBackColor = true;
+			//
 			// label1
-			// 
+			//
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(163, 92);
+			this->label1->Location = System::Drawing::Point(22, 49);
+			this->label1->Margin = System::Windows::Forms::Padding(1, 0, 1, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(439, 32);
+			this->label1->Size = System::Drawing::Size(164, 13);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Ingrese la expresión matemática: ";
-			// 
-			// txt_operacion
-			// 
-			this->txt_operacion->Location = System::Drawing::Point(190, 187);
-			this->txt_operacion->Name = L"txt_operacion";
-			this->txt_operacion->Size = System::Drawing::Size(328, 38);
-			this->txt_operacion->TabIndex = 0;
-			// 
+			//
 			// b_convertir
-			// 
-			this->b_convertir->Location = System::Drawing::Point(97, 476);
+			//
+			this->b_convertir->Location = System::Drawing::Point(25, 158);
+			this->b_convertir->Margin = System::Windows::Forms::Padding(1);
 			this->b_convertir->Name = L"b_convertir";
-			this->b_convertir->Size = System::Drawing::Size(149, 58);
+			this->b_convertir->Size = System::Drawing::Size(113, 24);
 			this->b_convertir->TabIndex = 1;
 			this->b_convertir->Text = L"Convertir";
 			this->b_convertir->UseVisualStyleBackColor = true;
 			this->b_convertir->Click += gcnew System::EventHandler(this, &ventana::b_convertir_Click);
-			// 
+			//
+			// txt_operacion
+			//
+			this->txt_operacion->Location = System::Drawing::Point(25, 82);
+			this->txt_operacion->Margin = System::Windows::Forms::Padding(1);
+			this->txt_operacion->Name = L"txt_operacion";
+			this->txt_operacion->Size = System::Drawing::Size(126, 20);
+			this->txt_operacion->TabIndex = 0;
+			//
 			// ventana
-			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(16, 31);
+			//
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1242, 875);
-			this->Controls->Add(this->b_convertir);
-			this->Controls->Add(this->groupBox1);
+			this->BackColor = System::Drawing::SystemColors::GradientActiveCaption;
+			this->ClientSize = System::Drawing::Size(447, 350);
+			this->Controls->Add(this->gb_inicio);
+			this->Margin = System::Windows::Forms::Padding(1);
 			this->Name = L"ventana";
 			this->Text = L"ventana";
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
-			this->gb_ordenes->ResumeLayout(false);
-			this->gb_ordenes->PerformLayout();
+			this->gb_inicio->ResumeLayout(false);
+			this->gb_inicio->PerformLayout();
+			this->gb_resultado->ResumeLayout(false);
+			this->gb_resultado->PerformLayout();
 			this->ResumeLayout(false);
+
+
 
 		}
 #pragma endregion
+	public:
+		String^ exp_Infija;
+		String^ exp_Postfija;
+		String^ exp_Preorden;
 
-private: System::Void b_convertir_Click(System::Object^ sender, System::EventArgs^ e) {
-	 
 
 
 
+	private: System::Void b_convertir_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	gb_ordenes->Visible = true;
 
-}
-private: System::Void txt_posfijo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+
+		if (((rb_infijo->Checked != false) || (rb_postfijo->Checked != false) || (rb_preorden->Checked != false)) && txt_operacion->Text != "")
+		{
+			gb_resultado->Visible = true;
+		}
+
+
+
+		if (rb_infijo->Checked == true) {
+			exp_Infija = txt_operacion->Text;
+			txt_Infijo->Text = exp_Infija;
+		}
+
+		if (rb_postfijo->Checked == true) {
+			exp_Postfija = txt_operacion->Text;
+			txt_Postfijo->Text = exp_Postfija;
+		}
+
+
+
+		if (rb_preorden->Checked == true) {
+			exp_Preorden = txt_operacion->Text;
+			txt_Preorden->Text = exp_Preorden;
+		}
+	}
+	private: System::Void b_volver_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+		gb_resultado->Visible = false;
+		gb_inicio->Visible = true;
+		txt_operacion->Text = "";
+		rb_infijo->Checked = false;
+		rb_postfijo->Checked = false;
+		rb_preorden->Checked = false;
+		txt_Infijo->Text = "";
+		txt_Postfijo->Text = "";
+		txt_Preorden->Text = "";
+
+
+
+	}
+	};
 }
