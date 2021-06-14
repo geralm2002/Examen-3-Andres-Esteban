@@ -39,7 +39,7 @@ class Solucion
             return;
         ayudanteInorden(nodo->subArbolIzdo());
         //recorrer subárbol izquierdo				
-        Console.WriteLine(nodo.datos + " ");
+        //Console.WriteLine(nodo.datos + " ");
         //mostrar datos del nodo
         ayudanteInorden(nodo->subArbolDcho());
         //recorrer subárbol derecho
@@ -55,7 +55,7 @@ class Solucion
         //recorrer subárbol izquierdo				
         ayudantePostorden(nodoM->subArbolDcho());
         //recorrer subárbol derecho
-        Console.WriteLine(nodoM.dato + " ");
+        //Console.WriteLine(nodoM.dato + " ");
         //mostrar datos del nodo
     }
 

@@ -65,16 +65,16 @@ namespace Examen3AndresEsteban {
 		void InitializeComponent(void)
 		{
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->txt_operacion = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->b_convertir = (gcnew System::Windows::Forms::Button());
 			this->gb_ordenes = (gcnew System::Windows::Forms::GroupBox());
-			this->txt_posfijo = (gcnew System::Windows::Forms::TextBox());
-			this->txt_infijo = (gcnew System::Windows::Forms::TextBox());
-			this->txt_preorden = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->txt_preorden = (gcnew System::Windows::Forms::TextBox());
+			this->txt_infijo = (gcnew System::Windows::Forms::TextBox());
+			this->txt_posfijo = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->txt_operacion = (gcnew System::Windows::Forms::TextBox());
+			this->b_convertir = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
 			this->gb_ordenes->SuspendLayout();
 			this->SuspendLayout();
@@ -90,32 +90,6 @@ namespace Examen3AndresEsteban {
 			this->groupBox1->TabIndex = 0;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"groupBox1";
-			// 
-			// txt_operacion
-			// 
-			this->txt_operacion->Location = System::Drawing::Point(190, 187);
-			this->txt_operacion->Name = L"txt_operacion";
-			this->txt_operacion->Size = System::Drawing::Size(328, 38);
-			this->txt_operacion->TabIndex = 0;
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(163, 92);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(439, 32);
-			this->label1->TabIndex = 1;
-			this->label1->Text = L"Ingrese la expresión matemática: ";
-			// 
-			// b_convertir
-			// 
-			this->b_convertir->Location = System::Drawing::Point(97, 476);
-			this->b_convertir->Name = L"b_convertir";
-			this->b_convertir->Size = System::Drawing::Size(149, 58);
-			this->b_convertir->TabIndex = 1;
-			this->b_convertir->Text = L"Convertir";
-			this->b_convertir->UseVisualStyleBackColor = true;
-			this->b_convertir->Click += gcnew System::EventHandler(this, &ventana::b_convertir_Click);
 			// 
 			// gb_ordenes
 			// 
@@ -133,37 +107,14 @@ namespace Examen3AndresEsteban {
 			this->gb_ordenes->Text = L"groupBox2";
 			this->gb_ordenes->Visible = false;
 			// 
-			// txt_posfijo
+			// label4
 			// 
-			this->txt_posfijo->Location = System::Drawing::Point(277, 127);
-			this->txt_posfijo->Name = L"txt_posfijo";
-			this->txt_posfijo->Size = System::Drawing::Size(302, 38);
-			this->txt_posfijo->TabIndex = 0;
-			// 
-			// txt_infijo
-			// 
-			this->txt_infijo->Location = System::Drawing::Point(277, 215);
-			this->txt_infijo->Name = L"txt_infijo";
-			this->txt_infijo->Size = System::Drawing::Size(302, 38);
-			this->txt_infijo->TabIndex = 1;
-			this->txt_infijo->TextChanged += gcnew System::EventHandler(this, &ventana::textBox2_TextChanged);
-			// 
-			// txt_preorden
-			// 
-			this->txt_preorden->Location = System::Drawing::Point(277, 321);
-			this->txt_preorden->Name = L"txt_preorden";
-			this->txt_preorden->Size = System::Drawing::Size(302, 38);
-			this->txt_preorden->TabIndex = 2;
-			// 
-			// label2
-			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(199, 56);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(125, 32);
-			this->label2->TabIndex = 3;
-			this->label2->Text = L"Postfijo: ";
-			this->label2->Click += gcnew System::EventHandler(this, &ventana::label2_Click);
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(193, 286);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(146, 32);
+			this->label4->TabIndex = 5;
+			this->label4->Text = L"PreOrden:";
 			// 
 			// label3
 			// 
@@ -173,16 +124,66 @@ namespace Examen3AndresEsteban {
 			this->label3->Size = System::Drawing::Size(84, 32);
 			this->label3->TabIndex = 4;
 			this->label3->Text = L"Infijo:";
-			this->label3->Click += gcnew System::EventHandler(this, &ventana::label3_Click);
+			this->label3->Click += gcnew System::EventHandler(this, &ventana::label3);
 			// 
-			// label4
+			// label2
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(193, 286);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(146, 32);
-			this->label4->TabIndex = 5;
-			this->label4->Text = L"PreOrden:";
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(199, 56);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(125, 32);
+			this->label2->TabIndex = 3;
+			this->label2->Text = L"Postfijo: ";
+			this->label2->Click += gcnew System::EventHandler(this, &ventana::label2);
+			// 
+			// txt_preorden
+			// 
+			this->txt_preorden->Location = System::Drawing::Point(277, 321);
+			this->txt_preorden->Name = L"txt_preorden";
+			this->txt_preorden->Size = System::Drawing::Size(302, 38);
+			this->txt_preorden->TabIndex = 2;
+			// 
+			// txt_infijo
+			// 
+			this->txt_infijo->Location = System::Drawing::Point(277, 215);
+			this->txt_infijo->Name = L"txt_infijo";
+			this->txt_infijo->Size = System::Drawing::Size(302, 38);
+			this->txt_infijo->TabIndex = 1;
+			this->txt_infijo->TextChanged += gcnew System::EventHandler(this, &ventana::txt_infijo);
+			// 
+			// txt_posfijo
+			// 
+			this->txt_posfijo->Location = System::Drawing::Point(277, 127);
+			this->txt_posfijo->Name = L"txt_posfijo";
+			this->txt_posfijo->Size = System::Drawing::Size(302, 38);
+			this->txt_posfijo->TabIndex = 0;
+			this->txt_posfijo->TextChanged += gcnew System::EventHandler(this, &ventana::txt_posfijo_TextChanged);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(163, 92);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(439, 32);
+			this->label1->TabIndex = 1;
+			this->label1->Text = L"Ingrese la expresión matemática: ";
+			// 
+			// txt_operacion
+			// 
+			this->txt_operacion->Location = System::Drawing::Point(190, 187);
+			this->txt_operacion->Name = L"txt_operacion";
+			this->txt_operacion->Size = System::Drawing::Size(328, 38);
+			this->txt_operacion->TabIndex = 0;
+			// 
+			// b_convertir
+			// 
+			this->b_convertir->Location = System::Drawing::Point(97, 476);
+			this->b_convertir->Name = L"b_convertir";
+			this->b_convertir->Size = System::Drawing::Size(149, 58);
+			this->b_convertir->TabIndex = 1;
+			this->b_convertir->Text = L"Convertir";
+			this->b_convertir->UseVisualStyleBackColor = true;
+			this->b_convertir->Click += gcnew System::EventHandler(this, &ventana::b_convertir_Click);
 			// 
 			// ventana
 			// 
@@ -210,6 +211,8 @@ private: System::Void b_convertir_Click(System::Object^ sender, System::EventArg
 
 	gb_ordenes->Visible = true;
 
+}
+private: System::Void txt_posfijo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
